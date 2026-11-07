@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Evolução</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <h1>PROJETO EVOLUÇÃO</h1>
+    <p>Construa sua própria evolução.</p>
+    <button id="themeButton">Alternar tema</button>
+  </header>
+
+  <main class="container">
+
+    
+<section class="painel perfil">
+  <h2>Meu perfil</h2>
+
+  <div class="perfil-foto">
+    <img id="profilePreview"
+         src="https://placehold.co/150x150/30394d/ffffff?text=Perfil"
+         alt="Foto de perfil">
+
+    <label for="profilePhoto" class="botao-foto">
+      Escolher foto
+    </label>
+
+    <input
+      type="file"
+      id="profilePhoto"
+      accept="image/*"
+      hidden
+    >
+  </div>
+
+  <label for="playerName">Nickname:</label>
+  <input
+    id="playerName"
+    type="text"
+    maxlength="20"
+    placeholder="Digite seu nickname"
+  >
+
+  <p>Rank: <strong id="rank">F</strong></p>
+  <p>XP: <strong id="xp">0</strong></p>
+
+  <div class="barra">
+    <div id="xpBar"></div>
+  </div>
+</section>
+
+
+    <section class="painel">
+      <h2>Status do personagem</h2>
+      <div id="statusList"></div>
+    </section>
+
+    <section class="painel">
+      <h2>Criar missão</h2>
+
+      <input id="missionName" type="text"
+        placeholder="Nome da missão">
+
+      <select id="missionDifficulty">
+        <option value="10">Fácil — 10 XP</option>
+        <option value="25">Média — 25 XP</option>
+        <option value="50">Difícil — 50 XP</option>
+        <option value="100">Extrema — 100 XP</option>
+      </select>
+
+      <select id="missionStat">
+        <option value="forca">Força</option>
+        <option value="inteligencia">Inteligência</option>
+        <option value="velocidade">Velocidade</option>
+        <option value="saude">Saúde</option>
+        <option value="resistencia">Resistência</option>
+        <option value="sabedoria">Sabedoria</option>
+        <option value="carisma">Carisma</option>
+      </select>
+
+      <button id="addMission">Adicionar missão</button>
+    </section>
+
+    <section class="painel">
+      <h2>Missões diárias</h2>
+      <div id="missionList"></div>
+    </section>
+
+    <section class="painel">
+      <h2>Conquistas</h2>
+      <div id="achievements"></div>
+    </section>
+
+    <section class="painel">
+      <h2>Histórico</h2>
+      <div id="history"></div>
+    </section>
+
+    <button id="resetButton" class="danger">
+      Reiniciar progresso
+    </button>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
